@@ -12,7 +12,7 @@ services:
     - volkszaehler
 
   volkszaehler:
-    image: volkszaehler/volkszaehler
+    image: vz
     ports:
     - 8080:8080
     # NOTE: The init command will only work once the database is fully up and running.
@@ -33,7 +33,7 @@ services:
     restart: always
 
   push-server:
-    image: volkszaehler/volkszaehler
+    image: vz
     ports:
     - 5582:5582
     - 8082:8082
